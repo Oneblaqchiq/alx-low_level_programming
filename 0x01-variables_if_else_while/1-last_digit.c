@@ -7,9 +7,9 @@
 
 
 /**
- *  main - returns value for (printf)
+ *  main - entry point
  *
- *  return : Always 0 (Success)
+ *  Return : Always 0 (Success)
  *
  */
 
