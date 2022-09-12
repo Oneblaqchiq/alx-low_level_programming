@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 
-
 /**
  *   main - prints hexadecimal base 0123456789abcdef, using putchar
  *
@@ -10,19 +9,21 @@
 
 int main(void)
 {
-	unsigned char a = '0';
-	int i;
+	int n = '0';
+	int a_to_f = 'a';
 
-	for (i = 0; i < 10; i++)
+	while (n <= '9') /*print 0-9*/
+
 	{
-		putchar(a);
+		putchar(n);
+		n++;
 	}
+	putchar('\n');
 
-	a = '1';
-	for (i = 0; i < 6; i++)
+	while (a_to_f <= 'f') /*print a-f to finish hexbase*/
 	{
-		putchar('0' + a);
-		a++;
+		putchar(a_to_f);
+		a_to_f++;
 	}
 
 	putchar('\n');
