@@ -10,41 +10,41 @@
 
 int main(void)
 {
-	int a, b, c, d;
+int i, j;
 
-	for (a = 48; a < 58; a++)
+
+
+for (i = 0; i < 100; i++)
+
+{
+
+	for (j = i + 1; j < 100; j++)
+
 	{
-		for (b = 48; b < 58; b++)
+
+		putchar(i / 10 + '0');
+
+		putchar(i % 10 + '0');
+
+		putchar(' ');
+
+		putchar(j / 10 + '0');
+
+		putchar(j % 10 + '0');
+
+		if (i != 98 || j != 99)
 
 		{
-			for (c = 48; c < 58; c++)
 
-			{
-				for (d = 48; d < 58; d++)
-				{
+			putchar(',');
 
-					if (a != c && c > a || b != d && d > b)
-					{
-						putchar(a);
+			putchar(' ');
 
-						putchar(b);
-
-						putchar(' ');
-
-						putchar(c);
-
-						putchar(d);
-
-						if (a != 57 || b != 56 || c != 57 || d != 57)
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
-				}
-			}
 		}
+
 	}
+
+}
 
 	putchar('\n');
 
