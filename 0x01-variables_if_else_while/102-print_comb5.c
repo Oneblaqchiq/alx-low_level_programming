@@ -7,42 +7,43 @@
  *  Return: Always 0 (Success)
 */
 
+
 int main(void)
-
 {
-	int firstNum = 0, secondNum = 1;
+	int a, b, c, d;
 
-
-	for (firstNum; firstNum < 99; firstNum++)
+	for (a = 48; a < 58; a++)
 	{
-		for (secondNum; secondNum < 100; secondNum++)
+		for (b = 48; b < 58; b++)
 
 		{
+			for (c = 48; c < 58; c++)
 
-			putchar(firstNum / 10 + '0');
-
-			putchar(firstNum % 10 + '0');
-
-			putchar(' ');
-			
-			putchar(secondNum / 10 + '0');
-			
-			putchar(secondNum % 10 + '0');
-
-
-			if (firstNum == 98 && secondNum == 99)
 			{
-				firstNum++;
-			}
+				for (d = 48; d < 58; d++)
+				{
 
-			else
-			{
-				putchar(',');
-				putchar(' ');
+					if (a != c && c > a || b != d && d > b)
+					{
+						putchar(a);
+
+						putchar(b);
+
+						putchar(' ');
+
+						putchar(c);
+
+						putchar(d);
+
+						if (a != 57 || b != 56 || c != 57 || d != 57)
+						{
+							putchar(',');
+							putchar(' ');
+						}
+					}
+				}
 			}
 		}
-
-		secondNum = firstNum + 2;
 	}
 
 	putchar('\n');
