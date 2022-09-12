@@ -10,11 +10,13 @@
 
 int main(void)
 {
-	char a
+	char letter = 122;
 
-
-	for (a = 'z'; a >= 'a' ; a--)
-		putchar(a);
+	while (letter > 96)
+	{
+		putchar(letter);
+		letter--;
+	}
 
 	putchar('\n');
 

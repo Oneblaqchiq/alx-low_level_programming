@@ -7,9 +7,9 @@
 
 
 /**
- *  main - Entry point for (void)
+ *  main - entry point
  *
- *  Return : Always 0(Success)
+ *  return : Always 0 (Success)
  *
  */
 
