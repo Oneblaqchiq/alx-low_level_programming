@@ -2,6 +2,9 @@
 
 #define _PUTCHAR_H_
 
+#include <stdio.h>
+
+
 /**
  *   _putchar - writes the character c to std
  *
