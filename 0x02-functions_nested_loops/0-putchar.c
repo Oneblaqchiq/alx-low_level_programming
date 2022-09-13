@@ -1,4 +1,4 @@
-#include "_putchar"
+#include "main.h"
 
 /**
  *   main - entry block
@@ -10,7 +10,7 @@ int main(void)
 
 {
 
-	holberton[] = "_putchar";
+	char _putchar[] = "_putchar";
 
 	int c;
 
@@ -18,7 +18,7 @@ int main(void)
 
 	{
 
-		_putchar(holberton[c]);
+		_putchar(_putchar[c]);
 
 	}
 
