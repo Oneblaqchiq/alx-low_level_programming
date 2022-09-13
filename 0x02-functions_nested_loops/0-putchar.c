@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- *   main - entry block
- *   @void: no argument
+ *   main - entry block to print _putchar
+ * 
  *   Return: 0
 */
 
@@ -10,7 +10,7 @@ int main(void)
 
 {
 
-	char _putchar[] = "_putchar";
+	char putchar[] = "_putchar";
 
 	int c;
 
@@ -18,7 +18,7 @@ int main(void)
 
 	{
 
-		_putchar(_putchar[c]);
+		_putchar(putchar[c]);
 
 	}
 
