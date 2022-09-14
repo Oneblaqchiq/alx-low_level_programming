@@ -7,7 +7,7 @@
 */
 
 
-void times_table(void)
+void times_table(main)
 {
 	int row;
 	int column;

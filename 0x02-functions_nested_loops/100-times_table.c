@@ -6,62 +6,43 @@
 
 void print_times_table(int n)
 {
-	int a, b, c, d1, d2, d3;
+	int i;
+	int j;
 
-	if (n >= 0 && n <= 15)
+	if (n <= 15 && n >= 0)
 	{
-		for (a = 0; a <= n; a++)
-
+		for (i = 0; i <= n; i++)
 		{
-			for (b = 0; b <= n; b++)
-
+			for (j = 0; j <= n; j++)
 			{
-				c = a * b;
+				int prod = j * i;
 
-				if (c >= 0 && c <= 9)
-
+				if (j == 0)
 				{
-					if (b != 0 && c >= 0)
-
-						_putchar(' '), _putchar(' '), _putchar(' ');
-					_putchar(c + '0');
-
-				}
-
-				else
-				{
-
-					if (c >= 10 && c <= 99)
-					{
-						if (c >= 10)
-						{
-							_putchar(' '), _putchar(' ');
-						}
-
-						d1 = (c / 10), 	_putchar(d1 + '0');
-						d2 = (c % 10), 	_putchar(d2 + '0');
-					}
-
-					else
-
-					{
-						if (c >= 100)
-						{
-							_putchar(' ');
-						}
-
-						d1 = (c / 100), _putchar(d1 + '0');
-						d2 = ((c / 10) % 10), _putchar(d2 + '0');
-						d3 = (c % 10), _putchar(d3 + '0');
-					}
-				}
-
-				if (b != n)
+					_putchar('0');
+				} else if (prod <= 9)
 				{
 					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar('0' + prod);
+				} else if (prod > 99)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar('0' + (prod / 100));
+					_putchar('0' + ((prod / 10) % 10));
+					_putchar('0' + (prod % 10));
+				} else
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar('0' + (prod / 10));
+					_putchar('0' + (prod % 10));
 				}
 			}
-
 			_putchar('\n');
 		}
 	}

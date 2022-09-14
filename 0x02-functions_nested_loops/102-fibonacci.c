@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 
-
 /**
  * main - Entry point
  *
@@ -10,21 +9,30 @@
 
 int main(void)
 {
-	unsigned long long a, b, c, i;
+	int counter = 2;
+	long int a = 1;
+	long int b = a + 1;
+	long int c = a + b;
 
+	printf("%ld, %ld, ", a, b);
 
-	a = 0;
-	b = 1;
-	c = 0;
-
-
-	for (i = 0; i <= 50; i++)
+	while (counter < 50)
 	{
-		c = a + b;
+		printf("%ld", c);
+
+		counter++;
 		a = b;
 		b = c;
-		printf("%llu\n", c);
+		c = a + b;
+
+		if (counter < 50)
+		{
+			printf(", ");
+		}
 	}
 
+	printf("\n");
+
 	return (0);
+
 }

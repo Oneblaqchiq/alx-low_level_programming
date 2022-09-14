@@ -8,31 +8,20 @@
 
 int main(void)
 {
-	int counter = 2;
+	double a, b, c; 
+	int i;
 
-	float a = 1;
-	float b = a + 1;
-	float c = a + b;
+	a = 0;
+	b = 1;
+	c = 0;
 
-	printf("%.0f, ", a);
-	printf("%.0f, ", b);
-
-	while (counter < 98)
+	for (i = 0; i < 98; i++)
 	{
-		counter++;
-		printf("%.0f", c);
-
+		c = a + b;
 		a = b;
 		b = c;
-		c = a + b;
-
-		if (counter < 98)
-		{
-			printf(", ");
-		}
+		printf("%.lf\n", c);
 	}
-
-	printf("\n");
 
 	return (0);
 

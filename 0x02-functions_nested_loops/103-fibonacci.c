@@ -7,25 +7,25 @@
  * Return:  Always 0 (Success)
 */
 
-int main(void)
+int main(void);
 {
-	unsigned long long a, b, c, i;
+	int counter = 0;
+	long int a = 1;
+	long int b = a;
+	long int c = a + b;
 
-	a = 0;
-	b = 1;
-	c = 0;
-
-
-	for (i = 0; i <= 98; i++)
+	while (c < 4000000)
 	{
-		if (i % 2 == 0 && c <= 4000000)
+		if (c % 2 == 0)
 		{
-			c = a + b;
-			a = b;
-			b = c;
-			printf("%llu\n", c);
+			counter += c;
 		}
+		a = b;
+		b = c;
+		c = a + b;
 	}
+
+	printf("%d\n", counter);
 
 	return (0);
 
