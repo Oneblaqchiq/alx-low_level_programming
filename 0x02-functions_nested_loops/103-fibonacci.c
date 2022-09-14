@@ -7,7 +7,7 @@
  * Return:  Always 0 (Success)
 */
 
-int main(void);
+int main(void)
 {
 	int counter = 0;
 	long int a = 1;

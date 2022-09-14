@@ -6,22 +6,26 @@
  * Return: nothing
 */
 
+
 int main(void)
 {
-	double a, b, c; 
+	unsigned long a = 1, b = 2, f = 0;
 	int i;
 
-	a = 0;
-	b = 1;
-	c = 0;
-
-	for (i = 0; i < 98; i++)
+	printf("%lu, %lu, ", a, b);
+	for (i = 0; i < 95; i++)
 	{
-		c = a + b;
-		a = b;
-		b = c;
-		printf("%.lf\n", c);
+		f = a + b;
+		if (i % 2 == 0)
+			a = f;
+		else
+			b = f;
+		printf("%lu", f);
+		if (i != 94)
+			printf(", ");
 	}
+
+	printf("\n");
 
 	return (0);
 
