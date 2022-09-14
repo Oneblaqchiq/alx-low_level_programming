@@ -9,21 +9,21 @@
 */
 
 void print_alphabet_x10(void)
-
 {
-	char i;
+	char alpha;
 
-	char h;
+	int counter;
 
-	for (h = 0; h <= 9; h++)
+	for (counter = 1; counter <= 10; counter++)
 
 	{
-		for (i = 'a'; i <= 'z'; i++)
-
+		for (alpha = 'a'; alpha <= 'z'; alpha++)
 		{
-			_putchar(i);
+			_putchar(alpha);
 		}
 
 		_putchar('\n');
 
 	}
+
+}
