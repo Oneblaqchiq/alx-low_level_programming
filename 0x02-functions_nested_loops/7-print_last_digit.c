@@ -14,6 +14,7 @@ int print_last_digit(int n)
 {
 	int mod;
 	char num;
+
 	if (n < 0)
 	{
 		mod = (n % 10) * (-1);
