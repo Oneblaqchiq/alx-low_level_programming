@@ -1,7 +1,5 @@
 #include <stdio.h>
-
 #include "function_pointers.h"
-
 
 /**
  * int_index - Depending on the function, it searches the array for equivalent values
@@ -9,13 +7,12 @@
  * @size: The number of listings in the array
  * @cmp: The pointer to a function
  * Return: The index of the first match. -1 if invalid size or no match
- */
+*/
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 	int (*ptr)(int);
-
 
 	if (size <= 0)
 		return (-1);
@@ -28,7 +25,6 @@ int int_index(int *array, int size, int (*cmp)(int))
 	{
 		if (ptr(array[i]))
 			return (i);
-
 	}
 
 	return (-1);
