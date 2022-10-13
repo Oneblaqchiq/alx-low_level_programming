@@ -9,20 +9,15 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
-	register unsigned int iter;
-	int sum;
-	va_list args;
+	unsigned int i;
+	int sum = 0;
+	va_list ap;
 
-	sum = 0;
+	va_start(ap, n);
 
-	va_start(args, n);
-	for (iter = 0; iter < n; iter++)
-	{
-		sum += va_arg(args, int);
-	}
-	if (n == 0)
-		return (0);
-	else
-		return (sum);
-	va_end(args);
+	for (i = 0; i < n; i++)
+		sum += va_arg(ap, int);
+	va_end(ap);
+	return (sum);
+
 }
