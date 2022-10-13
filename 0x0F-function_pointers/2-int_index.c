@@ -2,7 +2,7 @@
 #include "function_pointers.h"
 
 /**
- * int_index - Depending on the function, it searches the array for equivalent values
+ * int_index - Searches the array for corresponding values
  * @array: The array being passed in
  * @size: The number of listings in the array
  * @cmp: The pointer to a function

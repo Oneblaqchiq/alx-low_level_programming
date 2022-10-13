@@ -5,7 +5,7 @@
  * op_add - Function that adds two values
  * @a: First value
  * @b: Second valu
- * Return: The sum of a+b 
+ * Return: The sum of a+b
 */
 
 int op_add(int a, int b)
@@ -17,7 +17,7 @@ int op_add(int a, int b)
  * op_sub - Function that subtracts
  * @a: First value
  * @b: Second value
- * Return: The result of the subtracted values 
+ * Return: The result of the subtracted values
 */
 
 int op_sub(int a, int b)

@@ -4,8 +4,8 @@
 
 
 /**
- * main - begininning 
- * @argc: Number of arguments 
+ * main - begininning
+ * @argc: Number of arguments
  * @argv: Arguments kept in each index
  * Return: Success
 */
