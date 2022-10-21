@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -10,31 +13,38 @@
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new, *temp;
-	size_t nchar;
+	list_t *node;
+	list_t *tmp;
 
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
+	node = malloc(sizeof(list_t));
+	if (node == NULL)
 		return (NULL);
-
-	new->str = strdup(str);
-
-	for (nchar = 0; str[nchar]; nchar++)
-		;
-	new->len = nchar;
-	new->next = NULL;
-	temp = *head;
-
-	if (temp == NULL)
-	{
-		*head = new;
-	}
+	node->len = _strlen(str);
+	node->str = strdup(str);
+	node->next = NULL;
+	if (*head == NULL)
+		*head = node;
 	else
 	{
-		while (temp->next != NULL)
-			temp = temp->next;
-		temp->next = new;
+		tmp = *head;
+		while (tmp->next != NULL)
+			tmp = tmp->next;
+		tmp->next = node;
 	}
+	return (node);
+}
 
-	return (*head);
+/**
+ * _strlen - finds length of string
+ * @s: character of strin
+ * Return: length of string
+*/
+
+int _strlen(const char *s)
+{
+	int i;
+
+	while (s[i] != 0)
+		i++;
+	return (i);
 }
