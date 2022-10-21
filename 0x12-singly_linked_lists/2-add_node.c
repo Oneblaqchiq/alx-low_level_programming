@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -26,9 +25,9 @@ list_t *add_node(list_t **head, const char *str)
 }
 
 /**
- * _strlen - returns length 
- * @s: character of string
- * Return: length of string
+* _strlen - returns length
+* @s: character of string
+* Return: length of string
 */
 
 int _strlen(const char *s)
